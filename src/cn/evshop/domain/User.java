@@ -1,9 +1,16 @@
 package cn.evshop.domain;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 
-public class User {
+public class User implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public String id;
 	private String username;
 	private String password;
 	private String email;
@@ -14,6 +21,13 @@ public class User {
 	private int	status;
 	private String role;
 	private Timestamp regTime;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	
 	/**
 	 * @return the name

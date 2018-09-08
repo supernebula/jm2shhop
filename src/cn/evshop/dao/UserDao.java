@@ -38,7 +38,7 @@ public class UserDao {
 	// 激活用户
 	public void activeUser(String activeCode) throws SQLException
 	{
-		String sql = "UPDATE user SET state = ? WHERE active_code = ?";
+		String sql = "UPDATE user SET state = ? WHERE active_code = ?"; 
 		QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
 		runner.update(sql, 1, activeCode);
 	}
